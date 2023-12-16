@@ -22,7 +22,7 @@ const question = ref({
 function getWeather() {
   loading.value = true;
   axios
-    .get(`http://192.168.132.73:3000/weather/${country.value}`)
+    .get(`https://backend-6666.azurewebsites.net/weather/${country.value}`)
     .then((response) => {
       data.value = response.data;
       currentStatus.value = data.value.weather[0].main;
